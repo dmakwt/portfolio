@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFDFDFD),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
         textTheme: GoogleFonts.robotoTextTheme(
           Theme.of(context).textTheme.copyWith(),
         ),
