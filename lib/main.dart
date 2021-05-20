@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/screens/home_screen.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:portfolio/app_module.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ModularApp(
+    module: AppModule(),
+    child: AppWidget(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +23,6 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme.copyWith(),
         ),
       ),
-      home: HomeScreen(),
-    );
+    ).modular();
   }
 }
